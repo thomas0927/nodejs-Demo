@@ -1,12 +1,24 @@
 {
   "name": "blog-1",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=dev nodemon ./bin/www.js",
+    "prd": "cross-env NODE_ENV=production nodemon ./bin/www.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  },
+  "bin": {
+    "blog-1": "www.js"
+  },
+  "description": ""
 }
